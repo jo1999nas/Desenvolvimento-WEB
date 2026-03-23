@@ -2,10 +2,6 @@ p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-td {
-    vertical-align: top;
-}
-
 /* Página 1 */
 
 .mainNewsImg {
@@ -60,4 +56,36 @@ td {
 
 .rightNewsImg {
     max-width: 200px;
+}
+
+/* Página 3 */
+
+.topNewsImg {
+    width: 200px;
+}
+
+.topNewsText {
+    font-size: 1rem;
+}
+
+.mainNewsImage {
+    width: 1000px;
+}
+
+.mainNewsTitle {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.mainNewsSubtitle {
+    font-size: 1rem;
+    color: #222222;
+}
+
+.sideNewsImg {
+    width: 200px;
+}
+
+.sideNewsText {
+    font-size: 1rem;
 }
