@@ -2,6 +2,21 @@ p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Estilos para deixar o grid da tabela visível */
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    /* Tamanho mínimo para ver as células mesmo que estejam vazias */
+    min-width: 50px;
+    height: 50px;
+}
+
+
 /* Página 1 */
 
 .mainNewsImg {
