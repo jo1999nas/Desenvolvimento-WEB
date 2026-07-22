@@ -5,278 +5,287 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venda seu carro!</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <h1>Venda seu carro!</h1>
+    <p>Preencha os dados abaixo para anunciar seu veículo.</p>
     <form action="#" method="post" autocomplete="on">
-        <div>
-            <label for="nome">
-                Nome:
-                <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    placeholder="João da Silva"
-                    minlength="2"
-                    maxlength="100" 
-                    required
-                    aria-required="true"
-                    autocomplete="name">
-            </label>
-        </div>
-        <div>
-            <label for="email">
-                E-mail:
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="joao@exemplo.com" 
-                    required
-                    aria-required="true"
-                    autocomplete="email">
-            </label>
-        </div>
-        <div>
-            <label for="senha">
-                Senha:
-                <input
-                    type="password"
-                    id="senha"
-                    name="senha"
-                    minlength="8"
-                    maxlength="100"
-                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&._#])[A-Za-z\d@$!%*?&._#]{8,100}$"
-                    title="A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um símbolo."
-                    required
-                    aria-required="true"
-                    aria-describedby="senha-ajuda">
-            </label>
-
-            <small id="senha-ajuda">
-                Mínimo de 8 caracteres, uma letra maiúscula,
-                uma minúscula, um número e um símbolo.
-            </small>
-        </div>
-        <div>
-            <label for="confirmar_senha">
-                Confirmar Senha:
-                <input
-                    type="password"
-                    id="confirmar_senha"
-                    name="confirmar_senha"
-                    required
-                    aria-required="true">
-            </label>
-        </div>
-        <div>
-            <label for="data_nascimento">
-                Data de nascimento:
-                <input
-                    type="date"
-                    id="data_nascimento"
-                    name="data_nascimento"
-                    required
-                    aria-required="true">
-            </label>
-        </div>
-        <div>
-            <label for="hora_de_nascimento">
-                Hora de nascimento:
-                <input
-                    type="time"
-                    id="hora_de_nascimento"
-                    name="hora_de_nascimento">
-                    
-            </label>
-        </div>
-        <div>
-            <label for="genero">
-                Gênero:
-                <select name="genero" id="genero">
-                    <option value="masculino">Masculino</option>
-                    <option value="feminino">Feminino</option>
-                    <option value="outro">Outro</option>
-                </select>
-            </label>            
-        </div>
-        <div>
-            <label for="telefone">
-                Telefone:
-                <input
-                    type="tel"
-                    id="telefone"
-                    minlength="10"
-                    maxlength="11"
-                    pattern="[0-9]{10,11}"
-                    name="telefone"
-                    placeholder="21999999999"
-                    autocomplete="tel">
-            </label>
-        </div>
-        <div>
-            <label for="rede_social">
-                Rede social:
-                <input
-                    type="url"
-                    id="rede_social"
-                    name="rede_social"
-                    placeholder="https://www.instagram.com/usuario">
-            </label>
-        </div>
         <fieldset>
-            <legend>Você possui CNH?</legend>
-            <label>
-                <input
-                    type="radio"
-                    name="cnh"
-                    value="sim">
-                Sim
-            </label>
-            <label>
-                <input
-                    type="radio"
-                    name="cnh"
-                    value="nao">
-                Não
-            </label>
+            <legend>Informações pessoais</legend>
+            <div>
+                <label for="nome">
+                    Nome:
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="João da Silva"
+                        minlength="2"
+                        maxlength="100" 
+                        required
+                        aria-required="true"
+                        autocomplete="name">
+                </label>
+            </div>
+            <div>
+                <label for="email">
+                    E-mail:
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="joao@exemplo.com" 
+                        required
+                        aria-required="true"
+                        autocomplete="email">
+                </label>
+            </div>
+            <div>
+                <label for="senha">
+                    Senha:
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        minlength="8"
+                        maxlength="100"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&._#])[A-Za-z\d@$!%*?&._#]{8,100}$"
+                        title="A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um símbolo."
+                        required
+                        aria-required="true"
+                        aria-describedby="senha-ajuda">
+                </label>
+
+                <small id="senha-ajuda">
+                    Mínimo de 8 caracteres, uma letra maiúscula,
+                    uma minúscula, um número e um símbolo.
+                </small>
+            </div>
+            <div>
+                <label for="confirmar_senha">
+                    Confirmar Senha:
+                    <input
+                        type="password"
+                        id="confirmar_senha"
+                        name="confirmar_senha"
+                        required
+                        aria-required="true">
+                </label>
+            </div>
+            <div>
+                <label for="data_nascimento">
+                    Data de nascimento:
+                    <input
+                        type="date"
+                        id="data_nascimento"
+                        name="data_nascimento"
+                        required
+                        aria-required="true">
+                </label>
+            </div>
+            <div>
+                <label for="hora_de_nascimento">
+                    Hora de nascimento:
+                    <input
+                        type="time"
+                        id="hora_de_nascimento"
+                        name="hora_de_nascimento">
+                        
+                </label>
+            </div>
+            <div>
+                <label for="genero">
+                    Gênero:
+                    <select name="genero" id="genero">
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </label>            
+            </div>
+            <div>
+                <label for="telefone">
+                    Telefone:
+                    <input
+                        type="tel"
+                        id="telefone"
+                        minlength="10"
+                        maxlength="11"
+                        pattern="[0-9]{10,11}"
+                        name="telefone"
+                        placeholder="21999999999"
+                        autocomplete="tel">
+                </label>
+            </div>
+            <div>
+                <label for="rede_social">
+                    Rede social:
+                    <input
+                        type="url"
+                        id="rede_social"
+                        name="rede_social"
+                        placeholder="https://www.instagram.com/usuario">
+                </label>
+            </div>
+            <fieldset>
+                <legend>Você possui CNH?</legend>
+                <label>
+                    <input
+                        type="radio"
+                        name="cnh"
+                        value="sim">
+                    Sim
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="cnh"
+                        value="nao">
+                    Não
+                </label>
+            </fieldset>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Informações do veículo</legend>
+            <div>
+                <label for="buscar_marca">
+                    Buscar marca do veículo:
+                    <input
+                        type="search"
+                        id="buscar_marca"
+                        name="buscar_marca"
+                        placeholder="Ex.: Toyota, Honda, Volkswagen">
+                </label>
+            </div>
+            <div>
+                <label for="buscar_modelo">
+                    Buscar modelo do veículo:
+                    <input
+                        type="search"
+                        id="buscar_modelo"
+                        name="buscar_modelo"
+                        placeholder="Ex.: Corolla, Civic, Polo">
+                </label>
+            </div>
+            <div>
+                <label for="ano_de_fabricacao">
+                    Ano de fabricação:
+                    <input 
+                        type="number" 
+                        id="ano_de_fabricacao" 
+                        min="1900" 
+                        max="2026"
+                        step="1" 
+                        name="ano_de_fabricacao"
+                        required
+                        aria-required="true">
+                </label>
+            </div>        
+            <div>
+                <label for="cor_do_carro">
+                    Cor do carro:
+                    <input 
+                        type="color" 
+                        id="cor_do_carro"
+                        name="cor_do_carro">
+                </label>
+            </div>
+            <div>
+                <label for="data_e_hora_da_vistoria">
+                    Data e hora da vistoria:
+                    <input 
+                        type="datetime-local" 
+                        name="data_e_hora_da_vistoria"
+                        id="data_e_hora_da_vistoria">
+                </label>
+            </div>
+            <div>
+                <label for="placa">
+                    Placa do veículo:
+                    <input
+                        type="text"
+                        id="placa"
+                        name="placa"
+                        placeholder="Será informada após a vistoria"
+                        disabled>
+                </label>
+            </div>
+            <div>
+                <label for="estado_carro">
+                    Estado de conservação:
+                    <input
+                        type="range"
+                        id="estado_carro"
+                        name="estado_carro"
+                        min="0"
+                        max="10"
+                        step="1"
+                        value="5"
+                        aria-describedby="estado-ajuda">
+                </label>
+
+                <small id="estado-ajuda">
+                    0 representa péssimo estado e 10 representa excelente estado.
+                </small>
+            </div>
+            <div>
+                <label for="foto_do_carro">
+                    Envie uma foto do modelo desejado:
+                    <input 
+                        type="file" 
+                        name="foto_do_carro"
+                        id="foto_do_carro"
+                        accept="image/*">
+                </label>
+            </div>
+            <div>
+                <label for="descricao_do_carro">
+                    Descrição do carro:
+                    <textarea
+                        id="descricao_do_carro" 
+                        name="descricao_do_carro"
+                        maxlength="500"
+                        rows="5"
+                        cols="40"
+                        placeholder="Descreva o veículo..."></textarea>
+                </label>            
+            </div>
+            <div>
+                <label for="aceite_termos">
+                    Aceito os termos e condições:
+                    <input 
+                        type="checkbox" 
+                        id="aceite_termos"
+                        name="aceite_termos"
+                        required
+                        aria-required="true">
+                </label>
+            </div>
+            <div>
+                <input 
+                    type="hidden" 
+                    id="token"
+                    name="token"
+                    value="1234567890">
+            </div>
+            <div>
+                <label for="codigo">
+                    Código do anúncio:
+                    <input
+                        type="text"
+                        id="codigo"
+                        name="codigo"
+                        value="CAR20260001"
+                        readonly>
+                </label>
+            </div>
         </fieldset>
         
-        <hr>
-
-        <div>
-            <label for="buscar_marca">
-                Buscar marca do veículo:
-                <input
-                    type="search"
-                    id="buscar_marca"
-                    name="buscar_marca"
-                    placeholder="Ex.: Toyota, Honda, Volkswagen">
-            </label>
-        </div>
-        <div>
-            <label for="buscar_modelo">
-                Buscar modelo do veículo:
-                <input
-                    type="search"
-                    id="buscar_modelo"
-                    name="buscar_modelo"
-                    placeholder="Ex.: Corolla, Civic, Polo">
-            </label>
-        </div>
-        <div>
-            <label for="ano_de_fabricacao">
-                Ano de fabricação:
-                <input 
-                    type="number" 
-                    id="ano_de_fabricacao" 
-                    min="1900" 
-                    max="2026"
-                    step="1" 
-                    name="ano_de_fabricacao"
-                    required
-                    aria-required="true">
-            </label>
-        </div>        
-        <div>
-            <label for="cor_do_carro">
-                Cor do carro:
-                <input 
-                    type="color" 
-                    id="cor_do_carro"
-                    name="cor_do_carro">
-            </label>
-        </div>
-        <div>
-            <label for="data_e_hora_da_vistoria">
-                Data e hora da vistoria:
-                <input 
-                    type="datetime-local" 
-                    name="data_e_hora_da_vistoria"
-                    id="data_e_hora_da_vistoria">
-            </label>
-        </div>
-        <div>
-            <label for="placa">
-                Placa do veículo:
-                <input
-                    type="text"
-                    id="placa"
-                    name="placa"
-                    placeholder="Será informada após a vistoria"
-                    disabled>
-            </label>
-        </div>
-        <div>
-            <label for="estado_carro">
-                Estado de conservação:
-                <input
-                    type="range"
-                    id="estado_carro"
-                    name="estado_carro"
-                    min="0"
-                    max="10"
-                    step="1"
-                    value="5"
-                    aria-describedby="estado-ajuda">
-            </label>
-
-            <small id="estado-ajuda">
-                0 representa péssimo estado e 10 representa excelente estado.
-            </small>
-        </div>
-        <div>
-            <label for="foto_do_carro">
-                Envie uma foto do modelo desejado:
-                <input 
-                    type="file" 
-                    name="foto_do_carro"
-                    id="foto_do_carro"
-                    accept="image/*">
-            </label>
-        </div>
-        <div>
-            <label for="descricao_do_carro">
-                Descrição do carro:
-                <textarea
-                    id="descricao_do_carro" 
-                    name="descricao_do_carro"
-                    maxlength="500"
-                    rows="5"
-                    cols="40"
-                    placeholder="Descreva o veículo..."></textarea>
-            </label>            
-        </div>
-        <div>
-            <label for="aceite_termos">
-                Aceito os termos e condições:
-                <input 
-                    type="checkbox" 
-                    id="aceite_termos"
-                    name="aceite_termos"
-                    required
-                    aria-required="true">
-            </label>
-        </div>
-        <div>
-            <input 
-                type="hidden" 
-                id="token"
-                name="token"
-                value="1234567890">
-        </div>
-        <div>
-            <label for="codigo">
-                Código do anúncio:
-                <input
-                    type="text"
-                    id="codigo"
-                    name="codigo"
-                    value="CAR20260001"
-                    readonly>
-            </label>
-        </div>
-
         <div>
             <button type="submit">Salvar</button>
         </div>
