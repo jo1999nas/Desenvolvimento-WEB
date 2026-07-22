@@ -1,11 +1,7 @@
 const formulario = document.querySelector("form");
-const mensagem = document.getElementById("mensagem");
 
-formulario.addEventListener("submit", function(event){
-
+formulario.addEventListener("submit", function (event) {
     event.preventDefault();
-
-    mensagem.textContent = "";
 
     const nome = document.getElementById("nome");
     const senha = document.getElementById("senha");
@@ -13,46 +9,48 @@ formulario.addEventListener("submit", function(event){
     const ano = document.getElementById("ano_de_fabricacao");
     const termos = document.getElementById("aceite_termos");
 
-    nome.setAttribute("aria-invalid","false");
-    senha.setAttribute("aria-invalid","false");
-    confirmar.setAttribute("aria-invalid","false");
-    ano.setAttribute("aria-invalid","false");
+    // Remove marcações de erro anteriores
+    nome.setAttribute("aria-invalid", "false");
+    senha.setAttribute("aria-invalid", "false");
+    confirmar.setAttribute("aria-invalid", "false");
+    ano.setAttribute("aria-invalid", "false");
 
-    if(nome.value.trim().length < 2){
-
-        nome.setAttribute("aria-invalid","true");
-
-        mensagem.textContent = "Nome inválido.";
-
+    // Validação do nome
+    if (nome.value.trim().length < 2) {
+        nome.setAttribute("aria-invalid", "true");
+        alert("Digite um nome válido.");
+        nome.focus();
         return;
     }
 
-    if(senha.value !== confirmar.value){
-
-        senha.setAttribute("aria-invalid","true");
-        confirmar.setAttribute("aria-invalid","true");
-
-        mensagem.textContent = "As senhas não coincidem.";
-
+    // Validação das senhas
+    if (senha.value !== confirmar.value) {
+        senha.setAttribute("aria-invalid", "true");
+        confirmar.setAttribute("aria-invalid", "true");
+        alert("As senhas não coincidem.");
+        confirmar.focus();
         return;
     }
 
-    if(ano.value < 1900 || ano.value > 2026){
+    // Validação do ano
+    const anoFabricacao = Number(ano.value);
 
-        ano.setAttribute("aria-invalid","true");
-
-        mensagem.textContent = "Ano inválido.";
-
+    if (anoFabricacao < 1900 || anoFabricacao > 2026) {
+        ano.setAttribute("aria-invalid", "true");
+        alert("Ano de fabricação inválido.");
+        ano.focus();
         return;
     }
 
-    if(!termos.checked){
-
-        mensagem.textContent = "Você precisa aceitar os termos.";
-
+    // Validação dos termos
+    if (!termos.checked) {
+        alert("Você precisa aceitar os termos e condições.");
+        termos.focus();
         return;
     }
 
-    mensagem.textContent = "Cadastro realizado com sucesso!";
+    alert("Cadastro realizado com sucesso!");
 
+    // Opcional: limpa o formulário após o sucesso
+    formulario.reset();
 });
